@@ -1,0 +1,133 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu';
+}
+
+body {
+  font-family: 'Ubuntu';
+}
+
+#mainNav ul a,
+#mainNav ul li.sfHover ul a {
+  color: #8f8f8f !important;
+}
+
+#mainNav ul li.current a,
+#mainNav ul li.current-cat a,
+#mainNav ul li.current-menu-item a,
+#mainNav ul li.current-post-ancestor a,
+.single-post #mainNav ul li.current_page_parent a,
+#mainNav ul li.current-category-parent a,
+#mainNav ul li.current-category-ancestor a,
+#mainNav ul li.current-portfolio-ancestor a,
+#mainNav ul li.current-projects-ancestor a {
+  color: #67669a !important;
+}
+
+#mainNav ul li.sfHover a,
+#mainNav ul li a:hover,
+#mainNav ul li:hover {
+  color: #67669a !important;
+}
+
+#mainNav ul li.sfHover ul a:hover {
+  color: #67669a !important;
+}
+
+blockquote,
+address {
+  border-left: 5px solid #cd6634;
+}
+
+#content #filterNav,
+#content .project.small .overlay,
+.f_circleG,
+.skillList li span a:hover,
+.tax-skill #pageHead {
+  background: #cd6634;
+}
+
+@-webkit-keyframes f_fadeG {
+  0% {
+    background-color: #ffffff
+  }
+  100% {
+    background-color: #cd6634;
+  }
+}
+
+@-moz-keyframes f_fadeG {
+  0% {
+    background-color: #ffffff
+  }
+  100% {
+    background-color: #cd6634;
+  }
+}
+
+@-o-keyframes f_fadeG {
+  0% {
+    background-color: #ffffff
+  }
+  100% {
+    background-color: #cd6634;
+  }
+}
+
+@-ms-keyframes f_fadeG {
+  0% {
+    background-color: #ffffff
+  }
+  100% {
+    background-color: #cd6634;
+  }
+}
+
+a {
+  color: #77a7b9;
+}
+
+a:hover {
+  color: #8dc7dc;
+}
+
+.button,
+#searchsubmit,
+input[type="submit"] {
+  background-color: #757575 !important;
+}
+
+.button:hover,
+#searchsubmit:hover,
+input[type="submit"]:hover {
+  background-color: #595959 !important;
+}
+
+#logo {
+  margin-left: -20px;
+}
+
+.recentcomments a {
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Copyright 2014 Evernote Corporation. All rights reserved. */
+
+.en-markup-crop-options {
+  top: 18px !important;
+  left: 50% !important;
+  margin-left: -100px !important;
+  width: 200px !important;
+  border: 2px rgba(255, 255, 255, .38) solid !important;
+  border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+  margin-left: 0px !important;
+}

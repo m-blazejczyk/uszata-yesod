@@ -1,6 +1,9 @@
 <h1>Welcome to Yesod!
 
 <ol>
+  <li>
+    <a href=@{PoradnikR}>Poradnik użytkownika
+
   <li>Now that you have a working project you should use the #
     \<a href="http://www.yesodweb.com/book/">Yesod book<span class="glyphicon glyphicon-book"></span></a> to learn more. #
     You can also use this scaffolded site to explore some basic concepts.

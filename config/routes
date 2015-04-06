@@ -5,3 +5,5 @@
 /robots.txt RobotsR GET
 
 / HomeR GET POST
+/poradnik-opiekuna PoradnikR GET
+/poradnik-opiekuna/jak-przygotowac-mieszkanie MieszkanieR GET

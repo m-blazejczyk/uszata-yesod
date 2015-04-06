@@ -1,42 +1,108 @@
 $newline never
 \<!doctype html>
-\<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-\<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-\<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-\<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="pl">
   <head>
     <meta charset="UTF-8">
 
     <title>#{pageTitle pc}
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Anna Marczewska">
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold,bolditalic" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" />
+    <link rel="stylesheet" href=@{StaticR css_style_css} media="screen" />
+    <link rel='stylesheet' href=@{StaticR css_superfish_css} media='all' />
+    <link rel='stylesheet' href=@{StaticR css_flexslider_css} media='all' />
+    <script src=@{StaticR js_jquery_js}></script>
+    <script src=@{StaticR js_jquery_migrate_min_js}></script>
+    <link rel="stylesheet" href=@{StaticR css_uszata_css} media="screen" />
 
     ^{pageHead pc}
 
-    \<!--[if lt IE 9]>
-    \<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    \<![endif]-->
+  <body class="home page page-template-portfolio">
+    <div id="slideNav" class="panel">
+      <a href="javascript:jQuery.pageslide.close()" class="closeBtn">
 
-    <script>
-      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
-  <body>
-    <div class="container">
-      <header>
-      <div id="main" role="main">
-        ^{pageBody pc}
-      <footer>
-        #{appCopyright $ appSettings master}
+      <div class="menu-main-menu-container">
+        <ul id="menu-main-menu">
+          <li class="menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">Home
+          <li class="menu-item current-menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">Poradnik Opiekuna
+          <li class="menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">Organizacje adopcyjne
+          <li class="menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">Apel
+          <li class="menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">Prawa zwierząt
+          <li class="menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">Wegetarianizm
+          <li class="menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">Linki i literatura
+          <li class="menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">Galeria Uszatej
+          <li class="menu-item">
+            <a href="http://uszata.zeszytykomiksowe.org/">O stronie
 
-    $maybe analytics <- appAnalytics $ appSettings master
-      <script>
-        if(!window.location.href.match(/localhost/)){
-          window._gaq = [['_setAccount','#{analytics}'],['_trackPageview'],['_trackPageLoadTime']];
-          (function() {
-          \  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          \  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          \  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        }
+    <div id="container">
+      <div id="header">
+        <div class="inside clearfix">
+
+          <div id="logo">
+            <h1 class="logo">
+              <a href="http://uszata.zeszytykomiksowe.org"><img src="http://uszata.zeszytykomiksowe.org/wp-content/uploads/2015/01/Uszata-logo4.jpg" alt="Uszata Strona" />
+
+          <div id="mainNav" class="clearfix">
+            <div class="menu-main-menu-container">
+              <ul id="menu-main-menu-1" class="sf-menu">
+                <li class="menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">Home
+                <li class="menu-item current-menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">Poradnik Opiekuna
+                <li class="menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">Organizacje adopcyjne
+                <li class="menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">Apel
+                <li class="menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">Prawa zwierząt
+                <li class="menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">Wegetarianizm
+                <li class="menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">Linki i literatura
+                <li class="menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">Galeria Uszatej
+                <li class="menu-item">
+                  <a href="http://uszata.zeszytykomiksowe.org/">O stronie
+
+          <a href="#slideNav" class="menuToggle">
+
+      <!--
+        <ul id="filterNav" class="clearfix">
+          <li class="allBtn">
+            <a href="#" data-filter="*" class="selected">Wszystkie artykuły
+          <li>
+            <a href="#" data-filter=".zanim-przygarniesz">Zanim przygarniesz
+      -->
+
+      <div id="main" class="clearfix">
+        <!-- class = "fullProjects clearfix full" for tiled pages  -->
+        <!-- class = "clearfix" for content pages  -->
+        <div id="content" class="fullProjects clearfix full">
+          ^{pageBody pc}
+
+        <footer id="footer">
+          <div class="inside">
+            <p>
+              #{appCopyright $ appSettings master}
+            <p>
+              Based on a theme by <a href="http://themetrust.com" title="Premium WordPress Themes"><strong>Theme Trust</strong></a>
+
+    <script src=@{StaticR js_superfish_js}/>
+    <script src=@{StaticR js_jquery_fitvids_js}/>
+    <script src=@{StaticR js_jquery_isotope_min_js}/>
+    <script src=@{StaticR js_jquery_flexslider_min_js}/>
+    <script src=@{StaticR js_jquery_pageslide_min_js}/>
+    <script src=@{StaticR js_theme_trust_js}/>
