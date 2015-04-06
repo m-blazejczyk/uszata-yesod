@@ -16,36 +16,36 @@ getPoradnikR = do
 
 getMieszkanieR :: Handler Html
 getMieszkanieR = do
-  defaultLayout $ do
+  contentLayout $ do
     setTitle "Jak przygotować mieszkanie? - Uszata strona"
     $(widgetFile "poradnik-mieszkanie")
 
 getSkadWziacR :: Handler Html
 getSkadWziacR = do
-  defaultLayout $ do
+  contentLayout $ do
     setTitle "Skad wziąć królika? - Uszata strona"
     $(widgetFile "poradnik-skad-wziac")
 
 getPrzynoszenieR :: Handler Html
 getPrzynoszenieR = do
-  defaultLayout $ do
+  contentLayout $ do
     setTitle "Przynoszenie do domu - Uszata strona"
     $(widgetFile "poradnik-przynoszenie")
 
 getDlaDzieckaR :: Handler Html
 getDlaDzieckaR = do
-  defaultLayout $ do
+  contentLayout $ do
     setTitle "Królik dla dziecka? - Uszata strona"
     $(widgetFile "poradnik-dla-dziecka")
 
 getPlusyMinusyR :: Handler Html
 getPlusyMinusyR = do
-  defaultLayout $ do
+  contentLayout $ do
     setTitle "Plusy i minusy - Uszata strona"
     $(widgetFile "poradnik-plusy-minusy")
 
 getPodstawoweR :: Handler Html
 getPodstawoweR = do
-  defaultLayout $ do
+  contentLayout $ do
     setTitle "Podstawowe informacje - Uszata strona"
     $(widgetFile "poradnik-podstawowe-info")

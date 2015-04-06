@@ -137,3 +137,5 @@ genericLayout layoutFile widget = do
     withUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
 
 tileLayout widget = genericLayout $(widgetFile "layout-tile") widget
+
+contentLayout widget = genericLayout $(widgetFile "layout-content") widget

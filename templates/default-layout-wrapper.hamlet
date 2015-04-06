@@ -90,7 +90,7 @@ $newline never
       <div id="main" class="clearfix">
         <!-- class = "fullProjects clearfix full" for tiled pages  -->
         <!-- class = "clearfix" for content pages  -->
-        <div id="content" class="fullProjects clearfix full">
+        <div id="content" class="clearfix">
           ^{pageBody pc}
 
         <footer id="footer">
