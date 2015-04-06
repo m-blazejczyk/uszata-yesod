@@ -9,7 +9,7 @@
     <img width="300" height="225" src=@{StaticR img_pages_mieszkanie_jpg} alt="Jak przygotować mieszkanie" title="Jak przygotować mieszkanie" class="thumb wp-post-image" />
 
 <div class="project small" id="project-skad-wziac-krolika">
-  <a href="#" rel="bookmark">
+  <a href=@{SkadWziacR} rel="bookmark">
     <div class="description">
       <span class="title">Skad wziąć królika?
       <p>
@@ -19,7 +19,7 @@
     <img width="300" height="225" src=@{StaticR img_pages_skad_wziac_jpg} alt="Skad wziąć królika?" title="Skad wziąć królika?" class="thumb wp-post-image" />
 
 <div class="project small" id="project-przynoszenie-do-domu">
-  <a href="#" rel="bookmark">
+  <a href=@{PrzynoszenieR} rel="bookmark">
     <div class="description">
       <span class="title">Przynoszenie do domu
       <p>
@@ -29,7 +29,7 @@
     <img width="300" height="225" src=@{StaticR img_pages_przynoszenie_do_domu_jpg} alt="Przynoszenie do domu" title="Przynoszenie do domu" class="thumb wp-post-image" />
 
 <div class="project small" id="project-krolik-dla-dziecka">
-  <a href="#" rel="bookmark">
+  <a href=@{DlaDzieckaR} rel="bookmark">
     <div class="description">
       <span class="title">Królik dla dziecka?
       <p>
@@ -39,7 +39,7 @@
     <img width="300" height="225" src=@{StaticR img_pages_krolik_dla_dziecka_jpg} alt="Królik dla dziecka?" title="Królik dla dziecka?" class="thumb wp-post-image" />
 
 <div class="project small" id="project-plusy-i-minusy">
-  <a href="#" rel="bookmark">
+  <a href=@{PlusyMinusyR} rel="bookmark">
     <div class="description">
       <span class="title">Plusy i minusy
       <p>
@@ -49,7 +49,7 @@
     <img width="300" height="225" src=@{StaticR img_pages_zalety_i_wady_jpg} alt="Plusy i minusy" title="Plusy i minusy" class="thumb wp-post-image" />
 
 <div class="project small" id="project-podstawowe-informacje">
-  <a href="#" rel="bookmark">
+  <a href=@{PodstawoweR} rel="bookmark">
     <div class="description">
       <span class="title">Podstawowe informacje
       <p>

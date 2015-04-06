@@ -7,3 +7,8 @@
 / HomeR GET
 /poradnik-opiekuna PoradnikR GET
 /poradnik-opiekuna/jak-przygotowac-mieszkanie MieszkanieR GET
+/poradnik-opiekuna/skad-wziac-krolika SkadWziacR GET
+/poradnik-opiekuna/przynoszenie-do-domu PrzynoszenieR GET
+/poradnik-opiekuna/krolik-dla-dziecka DlaDzieckaR GET
+/poradnik-opiekuna/plusy-i-minusy PlusyMinusyR GET
+/poradnik-opiekuna/podstawowe-informacje PodstawoweR GET
