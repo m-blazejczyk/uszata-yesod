@@ -49,7 +49,7 @@ instance Yesod App where
         120    -- timeout in minutes
         "config/client_session_key.aes"
 
-    defaultLayout = tileLayout
+    defaultLayout widget = genericLayout $(widgetFile "layout-default") widget
 
     -- The page to be redirected to when authentication is required.
     authRoute _ = Just $ HomeR
@@ -129,14 +129,6 @@ instance RenderMessage App FormMessage where
 
 unsafeHandler :: App -> Handler a -> IO a
 unsafeHandler = Unsafe.fakeHandlerGetLogger appLogger
-
--- Note: Some functionality previously present in the scaffolding has been
--- moved to documentation in the Wiki. Following are some hopefully helpful
--- links:
---
--- https://github.com/yesodweb/yesod/wiki/Sending-email
--- https://github.com/yesodweb/yesod/wiki/Serve-static-files-from-a-separate-domain
--- https://github.com/yesodweb/yesod/wiki/i18n-messages-in-the-scaffolding
 
 genericLayout layoutFile widget = do
     master <- getYesod

@@ -17,3 +17,43 @@
         Wspaniałe króliki czekają w organizacjach adopcyjnych.
     <div class="overlay">
     <img width="300" height="225" src=@{StaticR img_pages_skad_wziac_jpg} alt="Skad wziąć królika?" title="Skad wziąć królika?" class="thumb wp-post-image" />
+
+<div class="project small" id="project-przynoszenie-do-domu">
+  <a href="#" rel="bookmark">
+    <div class="description">
+      <span class="title">Przynoszenie do domu
+      <p>
+        <span class="divider">
+        Jak zaplanować transport i nowe lokum dla królika?<br>Transport, nowy dom i dieta.
+    <div class="overlay">
+    <img width="300" height="225" src=@{StaticR img_pages_przynoszenie_do_domu_jpg} alt="Przynoszenie do domu" title="Przynoszenie do domu" class="thumb wp-post-image" />
+
+<div class="project small" id="project-krolik-dla-dziecka">
+  <a href="#" rel="bookmark">
+    <div class="description">
+      <span class="title">Królik dla dziecka?
+      <p>
+        <span class="divider">
+        Czego boją się króliki?<br>Noszenia i hałasu.
+    <div class="overlay">
+    <img width="300" height="225" src=@{StaticR img_pages_krolik_dla_dziecka_jpg} alt="Królik dla dziecka?" title="Królik dla dziecka?" class="thumb wp-post-image" />
+
+<div class="project small" id="project-plusy-i-minusy">
+  <a href="#" rel="bookmark">
+    <div class="description">
+      <span class="title">Plusy i minusy
+      <p>
+        <span class="divider">
+        Jakie są zalety i wady posiadania królika?
+    <div class="overlay">
+    <img width="300" height="225" src=@{StaticR img_pages_zalety_i_wady_jpg} alt="Plusy i minusy" title="Plusy i minusy" class="thumb wp-post-image" />
+
+<div class="project small" id="project-podstawowe-informacje">
+  <a href="#" rel="bookmark">
+    <div class="description">
+      <span class="title">Podstawowe informacje
+      <p>
+        <span class="divider">
+        Nie kieruj się mitami o łagodnych przytulankach.
+    <div class="overlay">
+    <img width="300" height="225" src=@{StaticR img_pages_podstawowe_informacje_jpg} alt="Podstawowe informacje" title="Podstawowe informacje" class="thumb wp-post-image" />
