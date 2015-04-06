@@ -1,32 +1,19 @@
-<div id="projects" class="clearfix">
-  <div id="floatingCirclesG">
-    <div class="f_circleG" id="frotateG_01">
-    <div class="f_circleG" id="frotateG_02">
-    <div class="f_circleG" id="frotateG_03">
-    <div class="f_circleG" id="frotateG_04">
-    <div class="f_circleG" id="frotateG_05">
-    <div class="f_circleG" id="frotateG_06">
-    <div class="f_circleG" id="frotateG_07">
-    <div class="f_circleG" id="frotateG_08">
+<div class="project small" id="project-jak-przygotowac-mieszkanie">
+  <a href=@{MieszkanieR} rel="bookmark">
+    <div class="description">
+      <span class="title">Jak przygotować mieszkanie?
+      <p>
+        <span class="divider">
+        Króliczy kąt to nie tylko klatka.
+    <div class="overlay">
+    <img width="300" height="225" src=@{StaticR img_pages_mieszkanie_jpg} alt="Jak przygotować mieszkanie" title="Jak przygotować mieszkanie" class="thumb wp-post-image" />
 
-  <div class="thumbs masonry">
-
-    <div class="project small" id="project-jak-przygotowac-mieszkanie">
-      <a href=@{MieszkanieR} rel="bookmark">
-        <div class="description">
-          <span class="title">Jak przygotować mieszkanie?
-          <p>
-            <span class="divider">
-            Króliczy kąt to nie tylko klatka.
-        <div class="overlay">
-        <img width="300" height="225" src=@{StaticR img_pages_mieszkanie_jpg} alt="Jak przygotować mieszkanie" title="Jak przygotować mieszkanie" class="thumb wp-post-image" />
-
-    <div class="project small" id="project-skad-wziac-krolika">
-      <a href="#" rel="bookmark">
-        <div class="description">
-          <span class="title">Skad wziąć królika?
-          <p>
-            <span class="divider">
-            Wspaniałe króliki czekają w organizacjach adopcyjnych.
-        <div class="overlay">
-        <img width="300" height="225" src=@{StaticR img_pages_skad_wziac_jpg} alt="Skad wziąć królika?" title="Skad wziąć królika?" class="thumb wp-post-image" />
+<div class="project small" id="project-skad-wziac-krolika">
+  <a href="#" rel="bookmark">
+    <div class="description">
+      <span class="title">Skad wziąć królika?
+      <p>
+        <span class="divider">
+        Wspaniałe króliki czekają w organizacjach adopcyjnych.
+    <div class="overlay">
+    <img width="300" height="225" src=@{StaticR img_pages_skad_wziac_jpg} alt="Skad wziąć królika?" title="Skad wziąć królika?" class="thumb wp-post-image" />

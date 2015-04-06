@@ -49,28 +49,12 @@ instance Yesod App where
         120    -- timeout in minutes
         "config/client_session_key.aes"
 
-    defaultLayout widget = do
-        master <- getYesod
-        mmsg <- getMessage
-
-        -- We break up the default layout into two components:
-        -- default-layout is the contents of the body tag, and
-        -- default-layout-wrapper is the entire page. Since the final
-        -- value passed to hamletToRepHtml cannot be a widget, this allows
-        -- you to use normal widget features in default-layout.
-
-        pc <- widgetToPageContent $ do
-            $(widgetFile "default-layout")
-        withUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
+    defaultLayout = tileLayout
 
     -- The page to be redirected to when authentication is required.
-    authRoute _ = Just $ AuthR LoginR
+    authRoute _ = Just $ HomeR
 
     -- Routes not requiring authentication.
-    isAuthorized (AuthR _) _ = return Authorized
-    isAuthorized FaviconR _ = return Authorized
-    isAuthorized RobotsR _ = return Authorized
-    -- Default to Authorized for now.
     isAuthorized _ _ = return Authorized
 
     -- This function creates static content files in the static folder
@@ -153,3 +137,11 @@ unsafeHandler = Unsafe.fakeHandlerGetLogger appLogger
 -- https://github.com/yesodweb/yesod/wiki/Sending-email
 -- https://github.com/yesodweb/yesod/wiki/Serve-static-files-from-a-separate-domain
 -- https://github.com/yesodweb/yesod/wiki/i18n-messages-in-the-scaffolding
+
+genericLayout layoutFile widget = do
+    master <- getYesod
+    mmsg <- getMessage
+    pc <- widgetToPageContent $ layoutFile
+    withUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
+
+tileLayout widget = genericLayout $(widgetFile "layout-tile") widget
