@@ -1,10 +1,10 @@
 <div id="pageHead">
   <h1>Jak przygotować mieszkanie?
   <div class="projectNav clearfix">
-    <div class="previous ">
+    <div class="previous inactive">
       <a href="http://uszata.zeszytykomiksowe.org/?project=skad-wziac-krolika" rel="prev">&larr;  Poprzedni artykuł
-    <div class="next inactive">
-      <a href="http://uszata.zeszytykomiksowe.org/?project=skad-wziac-krolika" rel="prev">Skad wziąć królika?  &rarr;
+    <div class="next">
+      <a href="http://uszata.zeszytykomiksowe.org/?project=skad-wziac-krolika" rel="next">Skad wziąć królika?  &rarr;
 
 <div class="project box">
   <div class="inside">

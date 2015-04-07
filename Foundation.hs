@@ -9,6 +9,8 @@ import Yesod.Core.Types            (Logger)
 import Yesod.Default.Util          (addStaticContentExternal)
 import qualified Yesod.Core.Unsafe as Unsafe
 
+data LayoutType = TileLayout | ContentLayout | HomeLayout | DefaultLayout deriving Enum
+
 -- | The foundation datatype for your application. This can be a good place to
 -- keep settings and values requiring initialization before your application
 -- starts running, such as database connections. Every handler will have
@@ -49,7 +51,7 @@ instance Yesod App where
         120    -- timeout in minutes
         "config/client_session_key.aes"
 
-    defaultLayout widget = genericLayout $(widgetFile "layout-default") widget
+    defaultLayout widget = genericLayout DefaultLayout $(widgetFile "layout-default") widget
 
     -- The page to be redirected to when authentication is required.
     authRoute _ = Just $ HomeR
@@ -130,15 +132,18 @@ instance RenderMessage App FormMessage where
 unsafeHandler :: App -> Handler a -> IO a
 unsafeHandler = Unsafe.fakeHandlerGetLogger appLogger
 
-genericLayout :: WidgetT App IO () -> t -> HandlerT App IO Html
-genericLayout layoutFile widget = do
+genericLayout :: LayoutType -> WidgetT App IO () -> t -> HandlerT App IO Html
+genericLayout layoutType layoutFile widget = do
     master <- getYesod
     mmsg <- getMessage
     pc <- widgetToPageContent $ layoutFile
+    bodyClass <- case layoutType of
+        ContentLayout -> return ("single single-project" :: String)  -- ':: String' is necessary because otherwise GHC can't figure out the type
+        _             -> return "home page page-template-portfolio"
     withUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
 
 tileLayout :: ToWidget App t => t -> HandlerT App IO Html
-tileLayout widget = genericLayout $(widgetFile "layout-tile") widget
+tileLayout widget = genericLayout TileLayout $(widgetFile "layout-tile") widget
 
 contentLayout :: ToWidget App t => t -> HandlerT App IO Html
-contentLayout widget = genericLayout $(widgetFile "layout-content") widget
+contentLayout widget = genericLayout ContentLayout $(widgetFile "layout-content") widget

@@ -16,13 +16,13 @@ $newline never
     <link rel="stylesheet" href=@{StaticR css_style_css} media="screen" />
     <link rel='stylesheet' href=@{StaticR css_superfish_css} media='all' />
     <link rel='stylesheet' href=@{StaticR css_flexslider_css} media='all' />
-    <script src=@{StaticR js_jquery_js}></script>
-    <script src=@{StaticR js_jquery_migrate_min_js}></script>
+    <script src=@{StaticR js_jquery_js}>
+    <script src=@{StaticR js_jquery_migrate_min_js}>
     <link rel="stylesheet" href=@{StaticR css_uszata_css} media="screen" />
 
     ^{pageHead pc}
 
-  <body class="home page page-template-portfolio">
+  <body class="#{bodyClass}">
     <div id="slideNav" class="panel">
       <a href="javascript:jQuery.pageslide.close()" class="closeBtn">
 
