@@ -51,7 +51,7 @@ instance Yesod App where
         120    -- timeout in minutes
         "config/client_session_key.aes"
 
-    defaultLayout widget = genericLayout DefaultLayout $(widgetFile "layout-default") widget
+    defaultLayout widget = genericLayout "home" DefaultLayout $(widgetFile "layout-default") widget
 
     -- The page to be redirected to when authentication is required.
     authRoute _ = Just $ HomeR
@@ -132,8 +132,9 @@ instance RenderMessage App FormMessage where
 unsafeHandler :: App -> Handler a -> IO a
 unsafeHandler = Unsafe.fakeHandlerGetLogger appLogger
 
-genericLayout :: LayoutType -> WidgetT App IO () -> t -> HandlerT App IO Html
-genericLayout layoutType layoutFile widget = do
+-- Custom layout support
+genericLayout :: String -> LayoutType -> WidgetT App IO () -> w -> HandlerT App IO Html
+genericLayout curPage layoutType layoutFile widget = do
     master <- getYesod
     mmsg <- getMessage
     pc <- widgetToPageContent $ layoutFile
@@ -142,8 +143,30 @@ genericLayout layoutType layoutFile widget = do
         _             -> return "home page page-template-portfolio"
     withUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
 
-tileLayout :: ToWidget App t => t -> HandlerT App IO Html
-tileLayout widget = genericLayout TileLayout $(widgetFile "layout-tile") widget
+tileLayout :: ToWidget App w => String -> w -> HandlerT App IO Html
+tileLayout curPage widget = genericLayout curPage TileLayout $(widgetFile "layout-tile") widget
 
-contentLayout :: ToWidget App t => t -> HandlerT App IO Html
-contentLayout widget = genericLayout ContentLayout $(widgetFile "layout-content") widget
+contentLayout :: ToWidget App w => String -> w -> HandlerT App IO Html
+contentLayout curPage widget = genericLayout curPage ContentLayout $(widgetFile "layout-content") widget
+
+-- Main menu
+getMainMenu :: [(Route App, String, Html)]
+getMainMenu = [(HomeR, "home", "Strona główna"),
+               (PoradnikR, "poradnik", "Poradnik opiekuna"),
+               (HomeR, "organizacje", "Organizacje adopcyjne"),
+               (HomeR, "apel", "Apel"),
+               (HomeR, "prawa", "Prawa zwierząt"),
+               (HomeR, "wege", "Wegetarianizm"),
+               (HomeR, "linki", "Linki i literatura"),
+               (HomeR, "galeria", "Galeria Uszatej"),
+               (HomeR, "o-stronie", "O stronie")]
+
+-- Accessors for 3-element tuples (because that's what getMainMenu returns).
+fst3 :: (t1, t2, t3) -> t1
+fst3 (t1, _, _) = t1
+
+snd3 :: (t1, t2, t3) -> t2
+snd3 (_, t2, _) = t2
+
+trd3 :: (t1, t2, t3) -> t3
+trd3 (_, _, t3) = t3
