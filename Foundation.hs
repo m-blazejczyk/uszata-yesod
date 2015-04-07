@@ -130,12 +130,15 @@ instance RenderMessage App FormMessage where
 unsafeHandler :: App -> Handler a -> IO a
 unsafeHandler = Unsafe.fakeHandlerGetLogger appLogger
 
+genericLayout :: WidgetT App IO () -> t -> HandlerT App IO Html
 genericLayout layoutFile widget = do
     master <- getYesod
     mmsg <- getMessage
     pc <- widgetToPageContent $ layoutFile
     withUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
 
+tileLayout :: ToWidget App t => t -> HandlerT App IO Html
 tileLayout widget = genericLayout $(widgetFile "layout-tile") widget
 
+contentLayout :: ToWidget App t => t -> HandlerT App IO Html
 contentLayout widget = genericLayout $(widgetFile "layout-content") widget
